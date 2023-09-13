@@ -1,0 +1,7 @@
+.image-class {
+    width: 300px; /* 이미지의 너비 조정 */
+    height: 200px; /* 이미지의 높이 조정 */
+    border: 2px solid #ccc; /* 테두리 추가 */
+    border-radius: 5px; /* 둥근 테두리 적용 */
+    margin-top: 10px; /* 위쪽 여백 추가 */
+}
