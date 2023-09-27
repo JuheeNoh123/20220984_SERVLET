@@ -1,6 +1,6 @@
 <%@ page contentType = "text/html; charset=utf-8" %>
 <footer class="container">
-		<p>&copy; WebMarket</p>
+		<p>&copy; 쇼핑몰 대표 : 노주희, 고유번호 : 20220984, 연락처 : 이메일 주소</p>
         <%
             Date day = new java.util.Date();
             String am_pm;
