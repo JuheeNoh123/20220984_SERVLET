@@ -4,7 +4,7 @@
 <nav class="navbar-expand navbar-dark bg-dark">
         <div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="./index.jsp">MUSINSA</a>
+				<a class="navbar-brand" href="./index.jsp">JUSINSA</a>
                 <div class="row">
                     <div class="col-md-auto ml-auto">
                         <div class="dropdown">

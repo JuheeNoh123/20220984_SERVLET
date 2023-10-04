@@ -39,4 +39,16 @@ public class ProductRepository {
 	public ArrayList<Product> getAllProducts() {
 		return listOfProducts;
 	}
+    
+    public Product getProductById(String productId){
+        Product productById = null;
+        for (int i = 0; i<listOfProducts.size();i++){
+            Product product = listOfProducts.get(i);
+            if(product != null && product.getProductId() !=null && product.getProductId().equals(productId)){    //아이디값 있는지 확인하고
+                productById = product;    //해당 아이디값 초기화 한후
+                break;
+            }
+        }
+        return productById;//해당 단일 아이디 리턴
+    }
 }
