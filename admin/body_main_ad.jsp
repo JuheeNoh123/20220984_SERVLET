@@ -1,7 +1,8 @@
 <%@ page contentType = "text/html; charset=utf-8" %>
 <%@ page import="java.util.ArrayList"%>
-<%@ page import="dto.Product"%>
+<%@ page import="dto.Product"%> <!-- 패키지 연동 -->
 <%@ page import="dao.ProductRepository"%>
+
 
 
 <%-- CLASS는 스타일 적용시에 사용 되는 이름, 중첩 가능 --%>   
@@ -17,12 +18,12 @@ String tagline = "실시간 랭킹"; %>
 	</div>	
 
         
-<%	//ArrayList<Product> listOfProducts = productDAO.getAllProducts();  // 리스트에 상품 전체 정보를 얻어온다.%> 	
-
 <%	
     ProductRepository dao = ProductRepository.getInstance();
     ArrayList<Product> listOfProducts = dao.getAllProducts();  // 리스트에 상품 전체 정보를 얻어온다.
 %> 	
+
+
 	<div class="container">
 		<div class="row" align="center">
 			<%
@@ -40,7 +41,7 @@ String tagline = "실시간 랭킹"; %>
 				<h3><%=product.getPname()%></h3>
                 <p><%=product.getDescription()%>
                 <p><%=product.getUnitPrice()%>원
-                <p><a href="product_detail.jsp?id=<%=product.getProductId()%>" class ="btn btn-secondary" role = "button"> 상품 상세 정보 &raquo;</a>
+                <p><a href="product_detail_ad.jsp?id=<%=product.getProductId()%>" class ="btn btn-secondary" role = "button"> 상품 상세 정보 &raquo;</a>
                         
                 
 			</div>
