@@ -32,7 +32,7 @@ String tagline = "실시간 랭킹"; %>
 			%>
 			<div class="col-md-4">
                 <div class="card bg-dark text-white">
-                    <img src="image/product/<%=product.getFilename()%>" class="card-img" alt="...">
+                    <img src="../image/product/<%=product.getFilename()%>" class="card-img" alt="...">
                     <div class="card-img-overlay">
                         <h5 class="card-title">무신사</h5>
                         <p class="card-text">출처 : 구글 검색</p>

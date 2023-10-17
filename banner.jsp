@@ -5,9 +5,7 @@
         width: 100%; /* 부모 요소의 100% 너비를 사용 */
         height: 100px; /* 원하는 높이로 설정 (자르고 싶은 비율에 맞게 조절) */
         object-fit: cover; /* 이미지를 부모 요소에 맞게 확대/축소하지 않음 */
-        
-
-    
+            
     }
 </style>
 <div class="text-center">

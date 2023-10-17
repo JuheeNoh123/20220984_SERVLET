@@ -15,7 +15,6 @@
     </head>
 <body>
     <%@ include file="banner_ad.jsp" %>
-
     <%@ include file="top_menu_ad.jsp" %>
 	<%@ include file="body_main_ad.jsp" %>	
     <%@ include file="footer_ad.jsp" %>

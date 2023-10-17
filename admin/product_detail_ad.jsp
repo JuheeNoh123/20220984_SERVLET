@@ -2,8 +2,9 @@
 <%@ page import="dto.Product"%>
 <%@ page import="java.util.Date"%>
 <%@ page import="example.*" %>
+<%@ page import="dao.ProductRepository"%>
 <%@ page errorPage = "../exception/product_not_found.jsp" %>
-<jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session" />
+
 <html>
     <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -22,7 +23,8 @@
 	</div>
 	<%
 		String id = request.getParameter("id");    //request : 내장 객체; 앞페이지에서 속성값을 정해주면 다음 페이지에서 메서드로 id값 받을 수 있음, 여러개 인자도 받을 수 있음
-		Product product = productDAO.getProductById(id);    //앞서 구현한 getProductById에 상품코드 받앟서 product에 넣어줌
+		ProductRepository dao= ProductRepository.getInstance();
+        Product product= dao.getProductById(id);
 	%>
 	<div class="container">
 		<div class="row">
@@ -35,7 +37,7 @@
 				<p><b>재고 수</b> : <%=product.getUnitsInStock()%>
 				<h4><%=product.getUnitPrice()%>원</h4>
                 <div class="card bg-dark text-white">
-                    <img src="../image/product/<%=product.getProductId()%>.png" class="card-img" alt="...">
+                    <img src="../image/product/<%=product.getFilename()%>.png" class="card-img" alt="...">
                     <div class="card-img-overlay">
                         <h5 class="card-title">상품 이미지 원본</h5>
                         <p class="card-text">출처 : 구글 검색</p>

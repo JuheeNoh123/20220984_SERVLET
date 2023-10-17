@@ -1,6 +1,7 @@
 <%@ page contentType = "text/html; charset=utf-8" %>
 <%@ page import="java.util.Date"%>
 <%@ page import="example.*" %> 
+<%@ page buffer="1kb" autoFlush="true"%>
 <%
     HelloWorld h = new HelloWorld();
 %>
@@ -19,10 +20,11 @@
 <body>
     <%@ include file="banner.jsp" %>
 
-    <%@ include file="top_menu.jsp" %>
+    <%@ include file="top_menu.jsp" %> 
 	<%@ include file="body_main.jsp" %>	
     <%@ include file="footer.jsp" %>
 
-	
+	현재 남은 버퍼 용량 : <%= out.getBufferSize() %> <br>
+    남은 페이지 버퍼 용량 : <%= out.getRemaining() %>
 </body>	
 </html>
