@@ -63,7 +63,7 @@ String tagline = "실시간 랭킹"; %>
 </div>
 
 <div class="card bg-dark text-black">
-    <img src="image/top.jpg" class="card-img" alt="...">
+    <img src="../image/top.jpg" class="card-img" alt="...">
     <div class="card-img-overlay">
         <h5 class="card-title">주신사</h5>
         <p class="card-text">노주희</p>
