@@ -12,6 +12,7 @@
                                 랭킹
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="navbar-brand" href="index.jsp">상품목록(기본 홈)</a>
                                 <a class="dropdown-item" href="#">상품</a>
                                 <a class="dropdown-item" href="#">브랜드</a>
                                 <a class="dropdown-item" href="#">검색어</a>
