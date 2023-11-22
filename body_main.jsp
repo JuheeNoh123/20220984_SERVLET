@@ -50,7 +50,7 @@ String tagline = "실시간 랭킹"; %>
 
 			</div>
 			<%
-				}
+				} // 반복문 끝난 이후 db 연결 종료	
                 if (rs != null)
                     rs.close();
                 if (pstmt != null)
