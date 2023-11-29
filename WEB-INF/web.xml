@@ -1,31 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app>
+    <!-- 1. 보안 역할(role) 정의 -->
 	<security-role>
 		<description></description >
 		<role-name>admin</role-name>
 	</security-role>
+    
+    <!-- 1. 보안 역할(role) 정의 -->
 	<security-constraint>
 		<display-name>WebMarket Security_01</display-name>
 		<web-resource-collection>
 			<web-resource-name>WebMarket</web-resource-name>
 			<description></description>
+            <!-- 특정 URL 패턴에 대한 보안 설정 -->
             <url-pattern>/admin/product_add.jsp</url-pattern>
             <url-pattern>/admin/index_ad.jsp</url-pattern>
             <url-pattern>/admin/product_edit.jsp</url-pattern>
 		</web-resource-collection>
 		<auth-constraint>
 			<description>권한 관리자명</description>
-            
+            <!-- 해당 URL에 접근하려면 'admin' 역할(role)이 필요함 -->
 			<role-name>admin</role-name>
 		</auth-constraint>
 	</security-constraint>
+    
+    <!-- 3. 로그인 설정 -->
     <login-config>
 		<auth-method>FORM</auth-method>
 		<form-login-config>
+            <!-- 폼 기반 로그인 페이지 및 인증 실패 페이지 설정 -->
 			<form-login-page>/login/login.jsp</form-login-page>
 			<form-error-page>/login/login_failed.jsp</form-error-page>
 		</form-login-config>
 	</login-config>
+    
     
     <servlet>
 		<servlet-name>BoardController</servlet-name>
@@ -34,6 +42,8 @@
 
 	<servlet-mapping>
 		<servlet-name>BoardController</servlet-name>
+        
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
+    
 </web-app>
