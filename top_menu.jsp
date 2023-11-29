@@ -5,7 +5,7 @@
         <div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="./index.jsp">JUSINSA</a>
-                
+                <a class="navbar-brand" href="/BoardListAction.do?pageNum=1">게시판(고객센터)</a>
                     
                         <a class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
